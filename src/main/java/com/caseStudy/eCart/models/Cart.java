@@ -6,8 +6,11 @@ import javax.persistence.*;
 public class Cart {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY )
-    private int id ;
+    private int cartid ;
+public Cart()
+    {
 
+    }
     @ManyToOne
     private Products items ;
     @ManyToOne
@@ -21,12 +24,12 @@ public class Cart {
         this.quantity = quantity ;
     }
 
-    public int getId() {
-        return id;
+    public int getCartid() {
+        return cartid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCartid(int cartid) {
+        this.cartid = cartid;
     }
 
     public Products getItems() {

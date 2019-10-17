@@ -10,12 +10,13 @@ import javax.persistence.Table;
 @Table(name="productInfo")
 
 public class Products {
-    public int getId() {
-        return id;
+
+    public int getProductid() {
+        return productid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setProductid(int productid) {
+        this.productid = productid;
     }
 
     public String getProductName() {
@@ -66,9 +67,17 @@ public class Products {
         this.description = description;
     }
 
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int productid;
     @Column( name = "pname")
     private String productName;
 
@@ -87,6 +96,8 @@ public class Products {
     @Column( name = "description")
     private String description ;
 
+    @Column(name = "active")
+    private int active;
 
 
 }

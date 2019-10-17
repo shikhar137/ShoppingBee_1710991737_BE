@@ -17,7 +17,7 @@ public class authController {
     authRepository z ;
 
     @PostMapping("/addUsers")
-    public Authorization addusers(@Valid @RequestBody Authorization auth )
+    public Authorization addusers(Authorization auth)
     {
         return z.save(auth);
     }

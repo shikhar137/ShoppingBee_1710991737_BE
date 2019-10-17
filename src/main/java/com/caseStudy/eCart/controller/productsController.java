@@ -39,5 +39,11 @@ public class productsController {
     {
         return p.findAllByProductPriceBetween(p_price1,p_price2);
     }
+    @PostMapping("/addproduct")
+    public Products addp(@Valid @RequestBody Products d)
+    {
+        return p.save(d);
+    }
+
 
 }

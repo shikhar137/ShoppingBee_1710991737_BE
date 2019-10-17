@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class Authorization implements Serializable {
     @Id
     @GeneratedValue ( strategy = GenerationType.IDENTITY)
-    int id ;
+    int userid ;
     @Column( name = "username")
     private String username ;
     @Column( name = "password")
@@ -18,12 +18,12 @@ public class Authorization implements Serializable {
     @Column( name = "role")
     private String role ;
 
-    public int getId() {
-        return id;
+    public int getUserid() {
+        return userid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
     public String getUsername() {
