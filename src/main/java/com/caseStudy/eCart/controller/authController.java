@@ -7,17 +7,16 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-@CrossOrigin(origins = "http://localhost:4200" , allowedHeaders = "*")
-@RestController
+
+@CrossOrigin(origins = "*" , methods = { RequestMethod.PUT , RequestMethod.GET , RequestMethod.POST })
 @RequestMapping("/auth")
-
-
+@RestController
 public class authController {
     @Autowired
     authRepository z ;
 
     @PostMapping("/addUsers")
-    public Authorization addusers(Authorization auth)
+    public Authorization addusers ( @Valid @RequestBody Authorization auth)
     {
         return z.save(auth);
     }
