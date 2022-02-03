@@ -25,6 +25,7 @@ public class cartController {
     @RequestMapping( value = "/removeproduct/recieve/{productid}", method = RequestMethod.GET)
     @ResponseBody
 
+
     public Optional<Cart> removeproduct(@PathVariable int productid , Principal principal )
     {
         return f.removeproduct(u.getUserId(principal),productid);
